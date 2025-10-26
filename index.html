@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>KJV V6.1 - Study Version</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body {font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.42857143;color:#333;background-color:#fff}
+.jtxt {margin:5px; padding:10px;}
+.jchk {width:25px; height:25px;}
+table {width:100%}
+table, th, td {border:1px solid White; border-collapse: collapse; padding:8px;}
+th {text-align: center;}
+td.o10 {text-align: center; width:10%; background-color:#FFE997; cursor: pointer}
+td.s10 {text-align: center; width:10%; background-color:SandyBrown; cursor: pointer}
+td.v10 {text-align: center; width:10%; background-color:#EAECEE}
+td.w10 {text-align: center; width:10%; background-color:#FFFFFF}
+
+td.o14 {text-align: center; width:14%; background-color:#FFE997; cursor: pointer}
+td.s14 {text-align: center; width:14%; background-color:SandyBrown; cursor: pointer}
+td.v14 {text-align: center; width:14%; background-color:#EAECEE}
+td.w14 {text-align: center; width:14%; background-color:#FFFFFF}
+
+td.g20 {text-align: center; width:20%; background-color:#FFC300; cursor: pointer}
+td.s20 {text-align: center; width:20%; background-color:SandyBrown; cursor: pointer}
+td.v20 {text-align: center; width:20%; background-color:#EAECEE}
+td.w20 {text-align: center; width:20%; background-color:#FFFFFF}
+
+td.s25 {text-align: center; width:25%; background-color:SandyBrown; cursor: pointer}
+td.v25 {text-align: center; width:25%; background-color:#EAECEE}
+
+td.g40 {text-align: center; width:40%; background-color:#FFC300; cursor: pointer}
+
+td.o50 {text-align: center; width:50%; background-color:#FFE997; cursor: pointer}
+td.v50 {text-align: center; width:50%; background-color:#EAECEE}
+
+td.w80 {text-align: center; width:80%; background-color:#FFFFFF}
+
+hr {border-color:#EAECEE}
+mark{padding:.2em;background-color:#fcf8e3}
+markgreen{padding:.2em;background-color:#fcf8e3;color:green;}
+markred{padding:.2em;background-color:#fcf8e3;color:red;}
+h5 {width:100%; text-align:left; border-bottom: 1px solid #EAECEE; line-height:0.1em; margin:10px 0 5px;}
+h5 span {background:#fff; padding:0 2px;}
+
+:target {
+    display: block;    
+    position: relative;     
+    top: -100px;
+    visibility: hidden;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head><body>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <span id="modal_data">test</span>
+  </div>
+</div>
+
+<div style="position:fixed; top:0; width:100%">
+	<div id="hdr_tbl" style="width:100%"></div>
+</div>
+<div id="Top"></div>
+<div id="disp_tbl"></div>
+<div class="jtxt" id="disp_txt"></div>
+<div style="position:fixed; bottom:0; width:100%">
+	<div id="btm_tbl" style="width:100%"></div>
+</div>
+
+<script>
+var var_coordinates = "d01001"
+</script>
+
+<script src="offsets_n_counts.js"></script>
+<script src="common_scripts.js"></script>
+<script src="kmain_scripts.js"></script>
+<script src="text_kjv.js"></script>
+<script src="text_kjm.js"></script>
+
+
+<script>
+/* When verson incremented, update remaining_scripts and story_scripts */
+
+if(lsTest()) {
+    var_coordinates = localStorage.getItem("okjm_v3_coordinates");
+};
+
+chapter_resume();
+
+function lsTest(){
+    var test = 'test';
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+var txt_modal = document.getElementById("modal_data");
+// Get the <span> element that closes the modal
+var spanmodal = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+spanmodal.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body></html>
