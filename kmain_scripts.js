@@ -1,11 +1,11 @@
 function chapter_resume() {
-	var tempString = var_coordinates;
-	if  (tempString != null && tempString.length == 6) {
-	    var x_b_no = parseInt(tempString.substring(1,3),10)
-		var x_c_no = parseInt(tempString.substring(3,6),10);
+	if  (var_coordinates != null && var_coordinates.length == 6) {
+	    var x_b_no = parseInt(var_coordinates.substring(1,3),10)
+		var x_c_no = parseInt(var_coordinates.substring(3,6),10);
 		chapter_open(x_b_no, x_c_no);
     }
     else {
+       var_coordinates = "d01001"
        chapter_open(1, 1);
     };
 }
